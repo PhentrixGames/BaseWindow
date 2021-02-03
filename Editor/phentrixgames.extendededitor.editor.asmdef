@@ -1,11 +1,9 @@
 {
-    "name": "NewAssembly",
-    "rootNamespace": "",
+    "name": "ExtendedWindow",
+    "rootNamespace": "PhentrixGames",
     "references": [],
     "includePlatforms": [],
-    "excludePlatforms": [
-        "Editor"
-    ],
+    "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],

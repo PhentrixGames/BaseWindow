@@ -5,6 +5,7 @@
   "unity": "2020.1",
   "description": "EditorWindow improvements",
   "type": "tool",
+  
   "repository": {
     "url": "https://github.com/PhentrixGames/BaseWindow.git",
     "type": "git",
