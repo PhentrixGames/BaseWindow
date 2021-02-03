@@ -4,5 +4,10 @@
   "displayName": "Extended Editor",
   "unity": "2020.1",
   "description": "EditorWindow improvements",
-  "type": "tool"
+  "type": "tool",
+  "repository": {
+    "url": "https://github.com/PhentrixGames/BaseWindow.git",
+    "type": "git",
+    "revision": "c97def465b1932276762fc13f4cfee58da99d5e9"
+  }
 }
