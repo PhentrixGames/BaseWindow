@@ -7,13 +7,12 @@ namespace PhentrixGames.Editor
 {
     public abstract class ExtendedWindow<T, U> : EditorWindow where T : EditorWindow where U : ScriptableObject
     {
-        protected T wnd;
         protected U selectedItem;
         protected VisualElement root;
 
         public static void Init(string name)
         {
-            wnd = GetWindow<T>();
+            T wnd = GetWindow<T>();
             wnd.titleContent = new GUIContent(name);
         }
 
@@ -33,7 +32,7 @@ namespace PhentrixGames.Editor
 
             for (int i = 0; i < items.Length; i++)
             {
-                string path = AssetDatabase.GUIToAssetPath(items[i]);
+                string path = AssetDatabase.GUIDToAssetPath(items[i]);
                 Button btn = new Button();
                 btn.text = Path.GetFileNameWithoutExtension(path);
                 btn.clickable.clicked += () =>
