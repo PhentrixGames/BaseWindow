@@ -20,9 +20,13 @@ public abstract class ExtendedWindow<T, U>: EditorWindow where T: EditorWindow w
         root = rootVisualElement;
     }
 
-    public void PopulateList()
+    /// <summary>
+    /// Populates an ItemList visual element with buttons for each scriptableobject of type U
+    /// </summary>
+    /// <param name="itemList">Name of ItemList visual element</param>
+    public void PopulateList(string itemList)
     {
-        VisualElement ItemList = root.Q<VisualElement>("ItemList");
+        VisualElement ItemList = root.Q<VisualElement>(itemList);
         string[] items = AssetDatabase.FindAssets("t:" + typeof(U).Name);
 
         for (int i = 0; i < items.Length; i++)
@@ -39,6 +43,9 @@ public abstract class ExtendedWindow<T, U>: EditorWindow where T: EditorWindow w
 
     protected abstract void UpdateItemInfo();
 
+    /// <summary>
+    /// Saves and Refreshs AssetDatabase
+    /// </summary>
     public void Save()
     {
         EditorUtility.SetDirty(selectedItem);
